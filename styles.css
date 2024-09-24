@@ -1,0 +1,165 @@
+*{
+    box-sizing: border-box;
+    margin:0 ;
+    padding: 0;
+    font-family: "Plus Jakarta Sans", sans-serif;;
+}
+main{
+    background-color: rgb(227, 244, 252, 1) ;
+}
+.card_container{
+    height: 70vh;
+    width: 60vw;
+}
+.card{
+    height: 70vh;
+    width: 60vw; 
+    border-radius: 1rem 0 0 1rem; 
+}
+.form_section{
+    margin-left: 2.3rem;
+}
+
+.results_section{
+    border-radius: 0px 1rem 1rem 4rem;
+    background-color: #133040;
+}
+.illustration{
+    height: 30%;
+}
+.results{
+    color: white ;
+}
+.informative_text{
+    color: #a9cadd;
+}
+.mortgage_title{
+    color: #1d3139;
+    margin-right: 5rem;
+}
+.clear_all{
+    color: #829298;
+    font-size: 1rem;
+}
+.mortgage_amount{
+    color: #829298;
+}
+.input_mortgage_amount{
+    width: 90%;
+    border: solid 1px gray;
+    outline-color: #d9da36;
+    padding-block: 0.5rem;
+}
+.libra{
+    left: 1px;
+    width: 2.2rem;
+    height: 2.47rem;
+    border-radius: 0.2rem 0 0 0.2rem;
+    background-color: #e2f5fc;
+    margin-top: 0.08rem;
+    &:hover{
+        background-color:#d9da36 ;
+    }
+}
+#mortgage_term{
+    padding-block: 0.5rem;
+    border: solid 1px gray;
+    outline-color:#d9da36;
+}
+#interest_rate{
+    padding-block: 0.5rem;
+    border: solid 1px gray;
+    outline-color:#d9da36;
+}
+.mortgage_term_title,
+.interest_title{
+    color: #829298;
+}
+.mortgage_term_label{
+    right: 1.02rem;
+    bottom: -7px;
+    background-color: #e2f5fc ;
+    width: 4rem;
+    height: 2.47rem;
+    &:hover{
+        background-color:#d9da36 ;
+    }
+    
+}
+.interest_rate{
+    right: 0.3px;
+    bottom: 1px;
+    width: 2.2rem;
+    height: 2.47rem;
+    border-radius: 0.2rem 0 0 0.2rem;
+    background-color: #e2f5fc;
+    margin-top: 0.08rem;
+    &:hover{
+        background-color:#d9da36 ;
+    }
+}
+.repayment{
+    width: 90%;
+    height: 2.6rem;
+    border: solid 1px gray;
+    &:hover{
+        background-color:#d9da36 ;
+        border:solid 1px #d9da36;
+    }
+}
+.repayment_input{
+    width: 1rem;
+    height: 1rem;
+    
+}
+.interest_input{
+    width: 1rem;
+    height: 1rem;
+}
+input[type="radio"]:checked{
+    background-color:#d9da36 ;
+    color: #d9da36;
+}
+.calculate{
+    background-color:#d9da36 ;
+    border-radius: 1.3rem;
+    padding-block: 0.7rem;
+}
+.icon_calculator{
+    height: 1rem;
+}
+.calculate_text{
+    font-size: 0.8rem;
+    color: #1d3032;
+}
+.results_section_numbers{
+    border-radius: 0px 1rem 1rem 4rem;
+    background-color: #133040;
+    padding-left: 2.8rem;
+}
+.numbers{
+    border: solid  #d9da36 ;
+    border-width: 4px 0px 0px 0px;
+    background-color: #0e2532;
+    width: 90%;
+}
+.monthly_repayments{
+    color: #829298;
+}
+.number_1{
+    color: #d9da36;
+    border: solid gray;
+    border-width: 0px 0px 1px 0px;
+}
+.monthly_repayments_2{
+    color: #829298;
+}
+.number_2{
+    color:#d8e8ea;
+}
+@media (max-width: 1500px){
+    .card{
+        width: 90vw;
+
+    }
+}
