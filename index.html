@@ -31,45 +31,54 @@
 </head>
 
 <body>
-  <main class="w-100 vh-100 d-flex justify-content-center align-items-center card_container">
-    <section class=" flex-wrap card border-white d-flex flex-column">
+  <main class="w-100 vh-100 d-flex justify-content-center align-items-center card_container ">
+    <!-- desktop dessign -->
+    <section class=" flex-wrap card border-white d-flex flex-column d-none d-md-flex d-lg-flex d-xl-flex d-xxl-flex">
       <!-- form -->
       <form class="h-100 w-50 form_section mt-5">
         <h4 class="fw-bold  mortgage_title d-flex justify-content-between"> Mortgage Calculator <a
-            class="clear_all d-flex align-self-center ms-5 " href=""> Clear All</a>
+            class="clear_all_desktop d-flex align-self-center  " href=""> Clear All</a>
         </h4>
         <div class="position-relative">
           <h6 class="mt-5 mortgage_amount">Mortgage Amount</h6>
-          <input id="mortgage_amount" class="input_mortgage_amount  rounded ps-5 " type="text">
-          <label for="mortgage_amount" class="position-absolute libra fs-5 pt-1 ps-2 ">£</label>
+          <input id="mortgage_amount" class=" rounded ps-5 input_1 col-11 pe-2" type="text">
+          <label for="mortgage_amount" class="position-absolute fs-5 pt-1 ps-2 libra mortgage_amount_label_desktop">£</label>
+          <h6 class="mt-2 field_required_text text-danger d-none">This field is required</h6>
         </div>
         <div class="d-flex mt-3">
           <div class="d-flex flex-column position-relative">
             <h6 class="mortgage_term_title">Mortgage term</h6>
-            <label class="mb-2 position-absolute  fs-5 mortgage_term_label ps-1 rounded-end pt-1"for="mortgage_term">years </label>
-            <input id="mortgage_term" class="me-3 rounded ps-2 "type="text">
+            <label class="mb-2 position-absolute  fs-5 mortgage_term_label_desktop ps-1 rounded-end pt-1"
+              for="mortgage_term_input">years </label>
+            <input id="mortgage_term_input"class="me-3 rounded ps-2 input_2 " type="text">
+            <h6 class="h6_input_2 mt-2 text-danger text_required_input2_desktop">This field is required</h6>
           </div>
           <div class="d-flex flex-column position-relative">
             <h6 class="interest_title ">Interest Rate</h6>
-            <label class=" position-absolute interest_rate pt-2 ps-2 rounded-end" id=""for="interest_rate">%</label>
-            <input id="interest_rate" class="rounded ps-2" type="text">
+            <label class=" position-absolute  pt-2 ps-2 rounded-end label_input2_desktop interest_rate " id="" for="interest_rate">%</label>
+            <input id="interest_rate" class="rounded ps-2 input_3" type="text">
+            <h6 class="h6_input_3 mt-2 text-danger mortgage_term_desktop_required">This field is required</h6>
           </div>
         </div>
         <div class="">
-          <h6 class="mt-3 mb-2">Mortgage Type</h6>
-          <div class="repayment bg-white rounded d-flex align-items-center mb-2">
-            <input class="ms-2 repayment_input" id="repayment_input "type="radio" name="option">
-            <label class="fw-bold ms-2" for="repayment_input">Repayment</label>
+          <h6 class="mt-3 mb-2 mortgage_type">Mortgage Type</h6>
+          <div class="repayment rounded d-flex align-items-center mb-2" id="repayment">
+            <label class="custom_radio_repayment rounded-circle position-relative d-flex justify-content-center align-items-center" for="repayment_input_desktop"></label>
+            <input class="ms-2 repayment_input" id="repayment_input_desktop" type="radio" name="option">
+            <label class="fw-bold ms-2" for="repayment_input_desktop">Repayment</label>
           </div>
-          <div class="repayment bg-white rounded d-flex align-items-center mb-4">
-            <input class="ms-2 interest_input" id="interest_input "type="radio" name="option">
+          <div class="repayment rounded d-flex align-items-center mb-2">
+            <input class="ms-2 interest_input" id="interest_input" type="radio" name="option">
             <label class="fw-bold ms-2" for="interest_input"> Interest Only</label>
           </div>
         </div>
-        <button type="submit"class="w-50 btn calculate fw-bold  d-flex align-items-center" onclick="calcular()"> <img class="icon_calculator ms-3 me-2 mb-1"src="./assets/images/icon-calculator.svg" alt=""> <span class="calculate_text">Calculate Repayments</span>
+        <h6 class="text-danger fw-bold d-none text_required_radio_desktop">This field is required</h6>
+        <button type="submit" class="w-50 btn calculate fw-bold  d-flex align-items-center calcular mt-3"> <img
+            class="icon_calculator ms-3 me-2 mb-1" src="./assets/images/icon-calculator.svg" alt=""> <span
+            class="calculate_text">Calculate Repayments</span>
         </button>
       </form>
-      <div class=" h-100 w-50  results_section d-flex flex-column justify-content-center align-items-center">
+      <div class=" h-100 w-50  results_section d-flex flex-column justify-content-center align-items-center results_container">
         <img class=" illustration" src="./assets/images/illustration-empty.svg" alt="">
         <h5 class="results fw-bold"> Results shown here</h5>
         <p class="d-flex text-center informative_text ms-3 me-3"> Complete the form and click “calculate repayments”
@@ -80,25 +89,67 @@
         <h5 class="results fw-bold ">Your results </h5>
         <p class="d-flex informative_text"> Your results are shown below based on the information you provided.
           To adjust the results, edit the form and <br> click “calculate repayments” again.</p>
-          <div class=" h-50 numbers rounded mt-3">
-            <!-- <h6 class="monthly_repayments mt-4 ms-4">  Your monthly repayments</h6>
-            <h1 class="number_1 ms-4 mt-3 fw-bold me-4 pb-4"></h1> -->
-            <!-- <h6 class="monthly_repayments_2 ms-4 mt-3">Total you'll repay over the term</h6> -->
-           <!--  <h5 class="number_2 ms-4 fw-bold">£500.000</h5> -->
-            
+        <div class=" h-50 numbers rounded mt-3">
+        </div>
+      </div>
+    </section>
+    <!-- mobile design -->
+    <section class="vw-100 vh-100 mobile_container d-flex d-md-none d-lg-none d-xl-none d-xxl-none flex-wrap ">
+      <form class="h-100 vw-100 ms-5" action="">
+        <h4 class="fw-bold   d-flex  mortgage_title mt-5"> Mortgage Calculator </h4>
+        <a class="clear_all" href=""> Clear All</a>
+        <div class="position-relative">
+          <h6 class="mt-5 mortgage_amount">Mortgage Amount</h6>
+          <input id="mortgage_amount" class="input_mortgage_amount  rounded ps-5 input_1_mobile" type="number">
+          <label for="mortgage_amount" class="position-absolute libra fs-5 pt-1 ps-2 label_input1_mobile">£</label>
+          <h6 class="h6_input1_mobile mt-2 text-danger mortgage_term_desktop_required">This field is required</h6>
+        </div>
+        <div class="d-flex flex-column position-relative">
+          <h6 class="mortgage_term_title mt-3">Mortgage term</h6>
+          <label class="mb-2 position-absolute  fs-5 mortgage_term_label_mobile ps-1 rounded-end pt-1"
+            for="mortgage_term_mobile">years </label>
+          <input id="mortgage_term_mobile" class=" me-3 rounded ps-2 input_2_mobile width_mobile " type="number">
+          <h6 class="h6_input2_mobile mt-2 text-danger mortgage_term_desktop_required">This field is required</h6>
+        </div>
+        <div class="d-flex flex-column position-relative">
+          <h6 class="interest_title ">Interest Rate</h6>
+          <label class=" position-absolute interest_rate_mobile pt-2 ps-2 rounded-end label_input3_mobile" id="" for="interest_rate">%</label>
+          <input id="interest_rate_mobile" class="rounded ps-2 input_3_mobile width_mobile" type="number">
+          <h6 class="h6_input3_mobile mt-2 text-danger  mortgage_term_desktop_required">This field is required</h6>
+        </div>
+        <div class="">
+          <h6 class="mt-3 mb-2  mortgage_type">Mortgage Type</h6>
+          <div class="repayment rounded d-flex align-items-center mb-2">
+            <input class="ms-2 repayment_input repayment_mobile_input " id="repayment_input_mobile" type="radio" name="option">
+            <label class="fw-bold ms-2" for="repayment_input_mobile">Repayment</label>
           </div>
+          <div class="repayment rounded d-flex align-items-center mb-4">
+            <input class="ms-2 interest_input interest_radio_mobile" id="interest_input " type="radio" name="option">
+            <label class="fw-bold ms-2" for="interest_input"> Interest Only</label>
+          </div>
+        </div>
+        <h6 class="text-danger fw-bold  text_required_radio_desktop my-3 d-none text_required_radio_mobile">This field is required</h6>
+        <button type="submit" class=" btn calculate_mobile fw-bold  d-flex align-items-center col-11 py-2 calcular"> <img
+            class=" ms-3 me-3 mb-1 fs-1" src="./assets/images/icon-calculator.svg" alt=""> <span
+            class="calculate_text fs-5">Calculate Repayments</span>
+        </button>
+      </form>
+      <div class=" h-50 w-100  results_section_mobile d-flex flex-column align-items-center results_container_mobile">
+        <img class=" illustration_mobile mt-3 mb-3" src="./assets/images/illustration-empty.svg" alt="">
+        <h5 class="results fw-bold mb-3"> Results shown here</h5>
+        <p class="d-flex text-center informative_text ms-3 me-3 "> Complete the form and click “calculate repayments”
+          to see what
+          your monthly repayments would be.</p>
+      </div>
+      <div class=" h-50 w-100 results_section_numbers_mobile d-flex flex-column pt-5 ps-4 d-none">
+        <h5 class="results fw-bold ">Your results </h5>
+        <p class="d-flex informative_text"> Your results are shown below based on the <br> information you provided.
+          To adjust the <br> results, edit the form and click “calculate <br> repayments” again.</p>
+        <div class=" h-50 numbers_mobile rounded mt-3">
+        </div>
       </div>
     </section>
   </main>
-
-  
-
-  <!-- Completed results end -->
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
 </body>
 
 </html>

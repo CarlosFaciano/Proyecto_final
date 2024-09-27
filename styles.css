@@ -1,165 +1,382 @@
-*{
+* {
     box-sizing: border-box;
-    margin:0 ;
+    margin: 0;
     padding: 0;
-    font-family: "Plus Jakarta Sans", sans-serif;;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    ;
 }
-main{
-    background-color: rgb(227, 244, 252, 1) ;
-}
-.card_container{
+
+/* desktop dessign */
+.card_container {
     height: 70vh;
     width: 60vw;
 }
-.card{
-    height: 70vh;
-    width: 60vw; 
-    border-radius: 1rem 0 0 1rem; 
+
+.card {
+    height: 80vh;
+    width: 60vw;
+    border-radius: 1rem 0 0 1rem;
 }
-.form_section{
+
+.form_section {
     margin-left: 2.3rem;
 }
 
-.results_section{
+.results_section {
     border-radius: 0px 1rem 1rem 4rem;
     background-color: #133040;
 }
-.illustration{
+
+.illustration {
     height: 30%;
 }
-.results{
-    color: white ;
+
+.results {
+    color: white;
 }
-.informative_text{
+
+.informative_text {
     color: #a9cadd;
 }
-.mortgage_title{
+
+.mortgage_title {
     color: #1d3139;
     margin-right: 5rem;
 }
-.clear_all{
+
+.clear_all {
     color: #829298;
     font-size: 1rem;
 }
-.mortgage_amount{
+
+.clear_all_desktop {
+    color: #829298;
+    font-size: 1rem;
+}
+
+.mortgage_amount_container {
+    height: 2.5rem;
+}
+
+.mortgage_amount {
     color: #829298;
 }
-.input_mortgage_amount{
+
+.input_mortgage_amount {
     width: 90%;
     border: solid 1px gray;
     outline-color: #d9da36;
     padding-block: 0.5rem;
 }
-.libra{
+
+.libra {
     left: 1px;
     width: 2.2rem;
     height: 2.47rem;
     border-radius: 0.2rem 0 0 0.2rem;
     background-color: #e2f5fc;
     margin-top: 0.08rem;
-    &:hover{
-        background-color:#d9da36 ;
+
+    &:hover {
+        background-color: #d9da36;
     }
 }
-#mortgage_term{
+
+.mortgage_term {
     padding-block: 0.5rem;
     border: solid 1px gray;
-    outline-color:#d9da36;
+    outline-color: #d9da36;
 }
-#interest_rate{
+
+.interest_rate {
     padding-block: 0.5rem;
     border: solid 1px gray;
-    outline-color:#d9da36;
+    outline-color: #d9da36;
 }
+
 .mortgage_term_title,
-.interest_title{
+.interest_title {
     color: #829298;
 }
-.mortgage_term_label{
-    right: 1.02rem;
-    bottom: -7px;
-    background-color: #e2f5fc ;
+
+.mortgage_term_label_desktop {
+    right: 1.04rem;
+    bottom: 28.5px;
+    background-color: #e2f5fc;
     width: 4rem;
     height: 2.47rem;
-    &:hover{
-        background-color:#d9da36 ;
+
+    &:hover {
+        background-color: #d9da36;
     }
-    
 }
-.interest_rate{
-    right: 0.3px;
-    bottom: 1px;
+
+.interest_rate {
+    right: 1px;
+    bottom: 36.5px;
+    width: 2.2rem;
+    height: 2.47rem;
+    border: solid 1px #e2f5fc;
+    border-radius: 0.2rem 0 0 0.2rem;
+    background-color: #e2f5fc;
+    margin-top: 0.08rem;
+
+    &:hover {
+        background-color: #d9da36;
+    }
+}
+
+.repayment {
+    display: none;
+    background-color: white;
+    width: 90%;
+    height: 2.6rem;
+    border: solid 1px gray;
+
+    &:hover {
+        background-color: #fafae0;
+        border: solid 1px #d9da36;
+    }
+}
+
+.repayment_input {
+    width: 1rem;
+    height: 1rem;
+    accent-color: #d9da36;
+}
+
+.interest_input {
+    width: 1rem;
+    height: 1rem;
+    accent-color: #d9da36;
+}
+
+.calculate {
+    background-color: #d9da36;
+    border-radius: 1.3rem;
+    padding-block: 0.7rem;
+}
+
+.icon_calculator {
+    height: 1rem;
+}
+
+.calculate_text {
+    font-size: 0.8rem;
+    color: #1d3032;
+}
+
+.results_section_numbers {
+    border-radius: 0px 1rem 1rem 4rem;
+    background-color: #133040;
+    padding-left: 2.8rem;
+}
+
+.numbers,
+.numbers_mobile {
+    border: solid #d9da36;
+    border-width: 4px 0px 0px 0px;
+    background-color: #0e2532;
+    width: 90%;
+}
+
+.monthly_repayments {
+    color: #829298;
+}
+
+.number_1 {
+    color: #d9da36;
+    border: solid gray;
+    border-width: 0px 0px 1px 0px;
+}
+
+.monthly_repayments_2 {
+    color: #829298;
+}
+
+.number_2 {
+    color: #d8e8ea;
+}
+
+.input_3 {
+    border: solid 1px gray;
+    padding-block: 0.5rem;
+    outline-color: #d9da36;
+}
+
+.input_2 {
+    padding-block: 0.5rem;
+    border: solid 1px gray;
+    outline-color: #d9da36;
+}
+
+.input_1 {
+    padding-block: 0.5rem;
+    border: solid 1px gray;
+    outline-color: #d9da36;
+}
+
+.mortgage_term_desktop_required {
+    visibility: hidden;
+}
+
+.text_required_input2_desktop {
+    visibility: hidden;
+}
+
+.mortgage_type {
+    color: #829298;
+}
+
+.custom_radio_repayment {
+    height: 15px;
+    width: 15px;
+    border: solid 1px #d9da36;
+    align-items: center;
+    justify-content: center;
+}
+
+.repayment:checked+.custom_radio_repayment::after {
+    content: "";
+    width: 60%;
+    height: 60%;
+    background-color: #d9da36;
+    border-radius: 100%;
+}
+
+@media (max-width: 1500px) {
+    .card {
+        width: 90vw;
+
+    }
+}
+
+@media (min-width:768px) {
+    main {
+        background-color: rgb(227, 244, 252, 1);
+    }
+}
+
+/* mobile dessign */
+.mortgage_term_label_mobile {
+    right: 2.35rem;
+    bottom: 1.8rem;
+    background-color: #e2f5fc;
+    width: 4rem;
+    height: 2.47rem;
+
+    &:hover {
+        background-color: #d9da36;
+    }
+}
+
+.interest_rate_mobile {
+    right: 2.35rem;
+    bottom: 2.3rem;
     width: 2.2rem;
     height: 2.47rem;
     border-radius: 0.2rem 0 0 0.2rem;
     background-color: #e2f5fc;
     margin-top: 0.08rem;
-    &:hover{
-        background-color:#d9da36 ;
-    }
-}
-.repayment{
-    width: 90%;
-    height: 2.6rem;
-    border: solid 1px gray;
-    &:hover{
-        background-color:#d9da36 ;
-        border:solid 1px #d9da36;
-    }
-}
-.repayment_input{
-    width: 1rem;
-    height: 1rem;
-    
-}
-.interest_input{
-    width: 1rem;
-    height: 1rem;
-}
-input[type="radio"]:checked{
-    background-color:#d9da36 ;
-    color: #d9da36;
-}
-.calculate{
-    background-color:#d9da36 ;
-    border-radius: 1.3rem;
-    padding-block: 0.7rem;
-}
-.icon_calculator{
-    height: 1rem;
-}
-.calculate_text{
-    font-size: 0.8rem;
-    color: #1d3032;
-}
-.results_section_numbers{
-    border-radius: 0px 1rem 1rem 4rem;
-    background-color: #133040;
-    padding-left: 2.8rem;
-}
-.numbers{
-    border: solid  #d9da36 ;
-    border-width: 4px 0px 0px 0px;
-    background-color: #0e2532;
-    width: 90%;
-}
-.monthly_repayments{
-    color: #829298;
-}
-.number_1{
-    color: #d9da36;
-    border: solid gray;
-    border-width: 0px 0px 1px 0px;
-}
-.monthly_repayments_2{
-    color: #829298;
-}
-.number_2{
-    color:#d8e8ea;
-}
-@media (max-width: 1500px){
-    .card{
-        width: 90vw;
 
+    &:hover {
+        background-color: #d9da36;
     }
+}
+
+.calculate_mobile {
+    background-color: #d9da36;
+    border-radius: 1.3rem;
+}
+
+.mobile_container {
+    height: 50vh;
+}
+
+.illustration_mobile {
+    height: 35%;
+}
+
+.results_section_mobile {
+    background-color: #133040;
+}
+
+.results_section_numbers_mobile {
+    background-color: #133040;
+}
+
+.field_required {
+    color: red;
+    padding-block: 0.5rem;
+    border: solid 1px rgba(255, 0, 0, 0.516);
+    outline-color: red;
+}
+
+.libra_error {
+    left: 1px;
+    width: 2.2rem;
+    height: 2.47rem;
+    border-radius: 0.2rem 0 0 0.2rem;
+    background-color: rgb(234, 20, 20);
+    margin-top: 0.08rem;
+    color: white;
+}
+
+.years_error {
+    right: 1.04rem;
+    bottom: 28.5px;
+    background-color: rgb(234, 20, 20);
+    width: 4rem;
+    height: 2.47rem;
+    color: white;
+}
+
+.interest_error {
+    right: 1px;
+    bottom: 36.5px;
+    width: 2.2rem;
+    height: 2.47rem;
+    border-radius: 0.2rem 0 0 0.2rem;
+    background-color: rgb(234, 20, 20);
+    color: white;
+    margin-top: 0.08rem;
+    border: solid 1px red;
+}
+
+.years_error_mobile {
+    right: 2.35rem;
+    bottom: 1.8rem;
+    background-color: rgb(234, 20, 20);
+    width: 4rem;
+    height: 2.47rem;
+    color: white;
+}
+
+.input_2_mobile {
+    width: 90%;
+    padding-block: 0.5rem;
+    border: solid 1px gray;
+    outline-color: #d9da36;
+}
+
+.input_3_mobile {
+    width: 90%;
+    padding-block: 0.5rem;
+    border: solid 1px gray;
+    outline-color: #d9da36;
+}
+
+.width_mobile {
+    width: 90%;
+}
+
+.label_interest_mobile {
+    right: 2.35rem;
+    bottom: 2.3rem;
+    width: 2.2rem;
+    height: 2.47rem;
+    border-radius: 0.2rem 0 0 0.2rem;
+    background-color: rgb(234, 20, 20);
+    margin-top: 0.08rem;
+    color: white;
 }
