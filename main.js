@@ -111,7 +111,7 @@ mortgage_term_mobile.addEventListener("input", () => {
         mortgage_term_label_mobile.classList.remove("years_error_mobile")
         h6_input2_mobile.classList.add("mortgage_term_desktop_required")
         mortgage_term_label_mobile.classList.remove("mortgage_term_label_mobile")
-        mortgage_term_label_mobile.classList.add("years_active")
+        mortgage_term_label_mobile.classList.add("years_active_mobile")
     }
 })
 interest_rate_mobile.addEventListener("input", () => {
